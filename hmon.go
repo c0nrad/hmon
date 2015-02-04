@@ -26,7 +26,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port != "" {
-		Port = port
+		Port = ":" + port
 	}
 
 	session, err := mgo.Dial(mongoURI)
