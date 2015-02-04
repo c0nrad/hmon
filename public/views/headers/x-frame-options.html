@@ -1,0 +1,50 @@
+<section>
+<span class="byline">Clickjacking Defense 101!</span>
+
+<b>What it looks like:</b> <code>X-Frame-Options: SAMEORIGIN</code><BR>
+<b>A great example:</b> <a href="https://securityheaders.com/2013/06/15/dazzlepodcom.php">Dazzlepod.com</a><br><BR>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+The X Frame Options header is designed to minimize the likelihood that an attacker can use a clickjacking attack against your site. In a clickjacking attack, the bad guy places a frame that invisibly renders your site over top of some other content below that is tempting for users to click on. <BR><BR>
+
+Here&#039;s an example: On some website under the control of the attacker, the attacker shows the user something like a "click here for a free Amazon gift card!" image, or a flashing but irresistible link to some salacious content online. What the user doesn&#039;t know is that your website is actually what will be clicked on because it&#039;s been rendered in a transparent iframe over top of whatever the user <i>thinks</i> he or she is about to click on.<BR><BR>
+
+"Who cares if a user inadvertantly clicks something on my site?" Here are some problems caused in the past that would be prevented today by using the X-Frame-Options header: <BR><BR>
+
+<ul><li>an attacker might trick a user to buy a product on a shopping site</li>
+<li>social network site users were tricked into making their profiles public</li>
+<li>links were shared on Facebook without the user&#039;s knowledge, and twitter profiles followed without the user&#039;s knowledge</li>
+</ul>
+
+You may believe those sorts of shenanigans won&#039;t happen on your site. I&#039;d rather not take the risk. Implementing the X-Frame-Options header takes a few moments, is unlikely to ever hurt anything for most sites most of the time and will prevent pain for you and your site&#039;s users.<BR><BR>
+
+<h3>Recommendations</h3>
+
+Review some of the links below to learn about X-Frame-Options (particularly <a href="https://twitter.com/ericlaw" target="_blank">Eric Lawson</a>'s Microsoft Developer Network piece) and then take it one step at a time. Place <code>X-Frame-Options: SAMEORIGIN</code> in some or all of your site's HTTP headers and keep an eye out for any bug reports or lost functionality on your site. The use of SAMEORIGIN means that only your own site should be able to frame your content ("your own site" meaning same host, port, and protocol). Give it a few weeks before deciding that no harm has been done.<BR><BR>
+If everything seems fine and you are not aware of <i>any</i> legitimate framing of your site, consider using <code>X-Frame-Options: DENY</code>. That will prevent the framing of any of your site's content anywhere, including on your own site.
+
+
+<blockquote class="twitter-tweet"><p>Quick note: if you aren’t using X-Frame-Options on your website you may want to start. Like, pronto. As in now. <a href="https://twitter.com/search?q=%23Blackhat&src=hash">#Blackhat</a></p>— RSnake (@RSnake) <a href="https://twitter.com/RSnake/statuses/363051058274115586">August 1, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<BR><BR>
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/HTTP/X-Frame-Options" target="_blank">Mozilla documentation on X-Frame-Options</a></li>
+<li><a href="http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx" target="_blank">Microsoft Developer Network</a></li>
+<li><a href="http://www.youtube.com/watch?v=3mk0RySeNsU" target="_blank">Quick YouTube demonstration of clickjacking</a></li>
+<li><a href="http://www.troyhunt.com/2013/05/clickjack-attack-hidden-threat-right-in.html" target="_blank">XFO primer by Troy Hunt</a></li>
+
+</ul>
+</section><section><hr><h4>We have seen this done well 5989 times. Here are a few...</h4>
+<li>
+<a href="https://securityheaders.com/2013/06/05/inkbunnynet.php">inkbunny.net</a>, examined Jun, 05, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/05/23/livenet.php">live.net</a>, examined May, 23, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/05/31/therebelchickcom.php">therebelchick.com</a>, examined May, 31, 2013
+</li></section>

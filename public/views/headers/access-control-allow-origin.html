@@ -1,0 +1,41 @@
+<section>
+<span class="byline">"...allowing cross-site HTTP requests from any domain is a bad idea." Tony DeLaGrange, Secure Ideas</span>
+
+<b>What You Do Not Want:</b> <code>Access-Control-Allow-Origin: *</code>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+Modern websites often include content dynamically pulled in from other sources online. SoundCloud, Flickr, Youtube and many other important websites <a href="http://enable-cors.org/resources.html" target="_blank">use</a> a technique called Cross Object Resource Sharing (CORS) to do so. Access Control Allow Origin is a header that is part of the "conversation" between the site a that wants to include data from another site. If your server includes this in its headers:<BR><BR>
+Access-Control-Allow-Origin: http://www.example-social-network.com<BR><BR>
+
+... it means that example-social-network.com is permitted to integrate your site&#039;s data and content.
+
+If your server includes this in its headers:<BR><BR>
+Access-Control-Allow-Origin: *<BR><BR>
+
+... it means that <i>anyone</i> is permitted to integrate your site&#039;s data and content, and being so blindly "promiscuous" is generally seen as risky because it opens the door to malicious or abusive CORS shenanigans. As others put it:<BR><BR>
+
+<blockquote>"This is the most common and obvious mistake that implementers can be make." - Attack and Defense Labs</blockquote>
+<BR><BR>
+This is why good parties have invitation lists - you don&#039;t want to let any guy off the street crash your party!
+
+
+<BR><BR>
+<h3>Further reading</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/HTTP/Access_control_CORS" target="_blank">Mozilla Developer Network on CORS </a></li>
+<li><a href="https://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity" target="_blank">Cross Origin Resource Sharing Security</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">Cross Origin Resource Sharing on Wikipedia</a></li>
+<li><a href="http://blog.secureideas.com/2013/02/grab-cors-light.html" target="_blank">Secure Ideas CORS Recommendations</a></li>
+</ul>
+
+</section><section><hr><h4>We have seen this done well 94014 times. Here are a few...</h4>
+<li>
+<a href="https://securityheaders.com/2013/05/31/togotutorcom.php">togotutor.com</a>, examined May, 31, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/05/31/adbladecom.php">adblade.com</a>, examined May, 31, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/05/08/newsobservercom.php">newsobserver.com</a>, examined May, 08, 2013
+</li></section>

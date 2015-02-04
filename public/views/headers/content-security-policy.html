@@ -1,0 +1,104 @@
+
+<section>
+  <span class="byline">Your best defense against Cross Site Scripting
+    (XSS)</span> <b>What it looks like:</b> Content-Security-Policy:
+    script-src &#039;self&#039; https://apis.google.com<br>
+    <br>
+    <b>A great example:</b> <a href=
+    "https://securityheaders.com/2013/04/30/simplemachinesorg.php">Simplemachines.org</a><br>
+
+    <br>
+
+    <h3>Tell Me More</h3>Content Security Policy (CSP) prevents cross site
+    scripting by explicitly declaring to browsers which script, media,
+    stylesheets, etc are supposed to be run from your website. By
+    whitelisting these resources, if an attacker is ever able to embed his
+    evil code on your site, the browser will ignore it and visitors to your
+    site will remain safe.<br>
+    <br>
+    The types of things you can whitelist using CSP include:<br>
+    <br>
+
+    <ul>
+      <li>script so javascript from a bad guy&#039;s site won&#039;t
+        load</li>
+
+        <li>images</li>
+
+        <li>frames, like those offered by YouTube</li>
+
+        <li>stylesheets</li>
+
+        <li>media like audio and video files</li>
+
+        <li>fonts</li>
+      </ul><br>
+      <br>
+      Johannes Ullrich of SANS believes that CSP is absolutely recommended
+      when creating a new website but in the June 13, 2013 edition of his
+      Internet Storm Center StormCast he states that CSP is "not easy to
+      implement on existing websites that weren&#039;t really coded around
+      it".<br>
+      <br>
+      Not easy but very worthwhile!<br>
+      <br>
+
+      <h3>Start Small</h3>Don&#039;t feel like you need to tackle every
+      possible CSP directive the first time you use this header. When you
+      begin implementing this header, just mention a single resource, like
+      frames. Then give it a week and if it looks like nothing on your site
+      broke, add another directive in your CSP header like image. As you go,
+      you&#039;ll build confidence and your site becomes safer for visitors,
+      which is good for business.<br>
+      <br>
+      Content Security Policy is perhaps the most powerful security header
+      you can use on your website. Go for it, and let us know how it
+      goes!<br>
+      <br>
+
+      <h3>Further reading</h3>
+
+      <ul>
+        <li>
+          <a href=
+          "https://mikewest.org/2011/10/content-security-policy-a-primer"
+          target="_blank">Google&#039;s Mike West&#039;s primer on
+          CSP</a>
+        </li>
+
+        <li>
+          <a href="http://www.youtube.com/watch?v=pocsv39pNXA" target=
+          "_blank">Google&#039;s Adam Barth explains CSP on Youtube</a>
+        </li>
+
+        <li>
+          <a href=
+          "http://www.html5rocks.com/en/tutorials/security/content-security-policy/"
+          target="_blank">CSP Tutorial</a>
+        </li>
+      </ul><br>
+
+      <h3>Implementation stories from the front lines</h3>
+
+      <ul>
+        <li>
+          <a href=
+          "https://blog.twitter.com/2013/csp-rescue-leveraging-browser-security"
+          target="_blank">Twitter rolls out CSP</a>
+        </li>
+
+        <li>
+          <a href=
+          "http://blog.sendsafely.com/post/42277333593/using-content-security-policy-to-prevent-cross-site"
+          target="_blank">SendSafely: Using Content Security Policy to
+          Prevent Cross-Site Scripting (XSS)</a>
+        </li>
+
+        <li>
+          <a href=
+          "http://blog.spiderlabs.com/2013/07/modsecurity-advanced-topic-of-the-week-mitigating-xss-vulnerabilities-using-targeted-csp-enforcement.html"
+          target="_blank">Trustwave SpiderLabs: Mitigating XSS
+          Vulnerabilities Using Targeted CSP Enforcement</a>
+        </li>
+      </ul>
+    </section>

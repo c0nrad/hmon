@@ -1,0 +1,29 @@
+<section>
+<span class="byline">Who has a need to know what software version you&#039;re running?</span>
+
+Example: <pre>X-Powered-By: PHP/5.2.13</pre>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+Having X-Powered-By in your headers is a bad thing. That is to say, it&#039;s unlikely to be useful unless you are an attacker. Notice in our example above it mentions PHP version 5.2.13? <BR><BR>
+
+There&#039;s a concept in information security called the <a href="http://en.wikipedia.org/wiki/Principle_of_least_privilege" target="_blank">principle of least privilege</a> which says you only get access to stuff you <i>need</i> access to. So don&#039;t advertise the details of your site&#039;s configuration with things like X-Powered-By.<BR><BR>
+
+Note that hiding the X-Powered-By details of your site won&#039;t prevent an attack but it requires more work from the attacker to learn about what vulnerabilities might be found on your site. That&#039;s what security is about, right? It&#039;s hard to stop every attack, but we should take the inexpensive steps to make an attack harder.<BR><BR>
+
+<h3>The Exception to the Rule</h3>
+
+X-Powered-By is, in my opinion, fine to have in your headers if the details it&#039;s providing are not true. The United States Department of Homeland Security and Department of Defense have been promoting research into a practice called <a href="http://www.cyber.st.dhs.gov/moving-target-defense/" target="_blank">moving target defense</a>:<BR><BR>
+
+<blockquote>"Moving Target Defense (MTD) is the concept of controlling change across multiple system dimensions in order to: increase uncertainty and apparent complexity for attackers, reduce their window of opportunity and increase the costs of their probing and attack efforts."</blockquote>
+
+Sounds great but before you get carried away with sexy stuff like MTD, make sure you have all the fundamental security controls in place (for example, all the <i>good</i> HTTP security headers!)<BR><BR>
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="http://stackoverflow.com/questions/2661799/removing-x-powered-by" target="_blank">Telling PHP not to display X-Powered-By</a></li>
+<li><a href="http://www.ducea.com/2006/06/16/apache-tips-tricks-hide-php-version-x-powered-by/" target="_blank">Hiding X Powered By</a></li>
+
+</ul>
+
+</section>

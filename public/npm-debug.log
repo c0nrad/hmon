@@ -1,0 +1,147 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'static' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'static', null ]
+5 verbose cache add name=undefined spec="static" args=["static",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'static',
+6 verbose parsed url   path: 'static',
+6 verbose parsed url   href: 'static' }
+7 silly lockFile a381562a-static static
+8 verbose lock static /Users/stuartlarsen/.npm/a381562a-static.lock
+9 silly lockFile a381562a-static static
+10 silly lockFile a381562a-static static
+11 verbose addNamed [ 'static', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d2003e6b-static static@
+14 verbose lock static@ /Users/stuartlarsen/.npm/d2003e6b-static.lock
+15 silly addNameRange { name: 'static', range: '*', hasData: false }
+16 verbose request where is /static
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 1f449371faa35c7d
+19 verbose url raw /static
+20 verbose url resolving [ 'https://registry.npmjs.org/', './static' ]
+21 verbose url resolved https://registry.npmjs.org/static
+22 verbose request where is https://registry.npmjs.org/static
+23 info trying registry request attempt 1 at 17:42:38
+24 http GET https://registry.npmjs.org/static
+25 http 200 https://registry.npmjs.org/static
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Sat, 31 Jan 2015 01:42:38 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"P621F8FDY54L1ANW5V015KRN"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '20716',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-iad2144-IAD',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1422668558.691886,VS0,VE57',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'static', range: '*', hasData: true }
+28 silly addNameRange versions [ 'static',
+28 silly addNameRange   [ '0.0.1',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.6',
+28 silly addNameRange     '0.4.7',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '2.0.0' ] ]
+29 verbose addNamed [ 'static', '2.0.0' ]
+30 verbose addNamed [ '2.0.0', '2.0.0' ]
+31 silly lockFile 524ecd2c-static-2-0-0 static@2.0.0
+32 verbose lock static@2.0.0 /Users/stuartlarsen/.npm/524ecd2c-static-2-0-0.lock
+33 silly lockFile ed0505ad-pmjs-org-static-static-2-0-0-tgz https://registry.npmjs.org/static/-/static-2.0.0.tgz
+34 verbose lock https://registry.npmjs.org/static/-/static-2.0.0.tgz /Users/stuartlarsen/.npm/ed0505ad-pmjs-org-static-static-2-0-0-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/static/-/static-2.0.0.tgz',
+35 verbose addRemoteTarball   'c865d93994ab450932dc8620b81899cb88c65bd2' ]
+36 info retry fetch attempt 1 at 17:42:38
+37 verbose fetch to= /var/folders/jc/rxppkyr57r1gwkv4vls3rb4c002qkz/T/npm-34251-YZugqdRQ/registry.npmjs.org/static/-/static-2.0.0.tgz
+38 http GET https://registry.npmjs.org/static/-/static-2.0.0.tgz
+39 http 200 https://registry.npmjs.org/static/-/static-2.0.0.tgz
+40 silly lockFile ed0505ad-pmjs-org-static-static-2-0-0-tgz https://registry.npmjs.org/static/-/static-2.0.0.tgz
+41 silly lockFile ed0505ad-pmjs-org-static-static-2-0-0-tgz https://registry.npmjs.org/static/-/static-2.0.0.tgz
+42 silly lockFile 524ecd2c-static-2-0-0 static@2.0.0
+43 silly lockFile 524ecd2c-static-2-0-0 static@2.0.0
+44 silly lockFile d2003e6b-static static@
+45 silly lockFile d2003e6b-static static@
+46 silly resolved [ { name: 'static',
+46 silly resolved     version: '2.0.0',
+46 silly resolved     dependencies:
+46 silly resolved      { handlebars: '~1.0',
+46 silly resolved        marked: '0.2.7',
+46 silly resolved        async: '0.1.22',
+46 silly resolved        cheerio: '0.12.0',
+46 silly resolved        underscore: '1.4.2',
+46 silly resolved        'highlight.js': '7.3.0' },
+46 silly resolved     bin: { static: 'bin/static' },
+46 silly resolved     description: 'Static ======',
+46 silly resolved     _id: 'static@2.0.0',
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'c865d93994ab450932dc8620b81899cb88c65bd2',
+46 silly resolved        tarball: 'http://registry.npmjs.org/static/-/static-2.0.0.tgz' },
+46 silly resolved     _from: 'static@',
+46 silly resolved     _npmVersion: '1.3.2',
+46 silly resolved     _npmUser: { name: 'eastridge', email: 'ryan@eastridge.me' },
+46 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+46 silly resolved     directories: {},
+46 silly resolved     _shasum: 'c865d93994ab450932dc8620b81899cb88c65bd2',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/static/-/static-2.0.0.tgz' } ]
+47 info install static@2.0.0 into /usr/local/lib
+48 info installOne static@2.0.0
+49 verbose lib/node_modules/static unbuild
+50 verbose tar unpack /Users/stuartlarsen/.npm/static/2.0.0/package.tgz
+51 silly lockFile 3d3fc09f-sr-local-lib-node-modules-static tar:///usr/local/lib/node_modules/static
+52 verbose lock tar:///usr/local/lib/node_modules/static /Users/stuartlarsen/.npm/3d3fc09f-sr-local-lib-node-modules-static.lock
+53 silly lockFile cd1ada33-sen-npm-static-2-0-0-package-tgz tar:///Users/stuartlarsen/.npm/static/2.0.0/package.tgz
+54 verbose lock tar:///Users/stuartlarsen/.npm/static/2.0.0/package.tgz /Users/stuartlarsen/.npm/cd1ada33-sen-npm-static-2-0-0-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/static'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/static']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/static',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/static',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 14.0.0
+59 error command "node" "/usr/local/bin/npm" "install" "-g" "static"
+60 error cwd /Users/stuartlarsen/Projects/go/src/git.corp.yahoo.com/stuartlarsen/hmon/public
+61 error node -v v0.10.35
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/static
+64 error fstream_path /usr/local/lib/node_modules/static
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/static'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]

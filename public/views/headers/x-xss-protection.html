@@ -1,0 +1,27 @@
+<section>
+<span class="byline">Tell Internet Explorer how to behave when XSS is suspected!</span>
+
+<b>What it looks like:</b> X-XSS-Protection: 1; mode=block<BR><BR>
+
+<b>A great example:</b> <a href="https://securityheaders.com/2013/04/25/urbandictionarycom.php">UrbanDictionary.com</a><br><BR>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+Sure, of course you have made it impossible for cross site scripting (XSS) attacks to take place on your site. Of course you have!<BR><BR>
+
+That&#039;s what they all say.<BR><BR>
+
+The X-XSS-Protection header comes to us from Microsoft and is used by Internet Explorer (IE). IE&#039;s built-in ability to stop XSS attacks from harming users has improved over time. Lots of XSS protections are in place already by default in IE.<BR><BR>
+
+However if you would like to tell IE to be even more strict about how it responds when it suspects an XSS attack, you can use the X-XSS-Protection to do so. There are multiple settings you can use with X-XSS-Protection. The one we like the best is shown in the example above, and outright prevents IE from rendering a page that it suspects may be loading an XSS attack.<BR><BR>
+
+Other X-XSS-Protection options are to sanitize the content and then render it, or to render the content even though it looks like an attack. We don&#039;t recommend either of these options. Better safe than sorry, right?<BR><BR>
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="http://blogs.msdn.com/b/ieinternals/archive/2011/01/31/controlling-the-internet-explorer-xss-filter-with-the-x-xss-protection-http-header.aspx" target="_blank">Microsoft&#039;s X-XSS-Protection documentation</a></li>
+<li><a href="http://www.jtmelton.com/2012/03/13/year-of-security-for-java-week-11-x-xss-protection/" target="_blank">John Melton&#039;s sweet X-XSS-Protection analysis</a></li>
+
+
+</ul>
+</section>

@@ -1,0 +1,36 @@
+<section>
+<span class="byline">Who decides how Adobe pdf and Flash files might integrate your content? You do!</span>
+
+<b>Example:</b> <pre>X-Permitted-Cross-Domain-Policies: master-only</pre>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+Before we get into the weeds on this one, you should know up front that this HTTP header is not the first one you should bother trying to implement if you have not already pursued the large gains offered by headers like <a href="https://securityheaders.com/x-frame-options.php">X-Frame-Options</a>, <a href="https://securityheaders.com/http-strict-transport-security.php">Strict Transport Security</a>, or <a href="https://securityheaders.com/content-security-policy.php">Content Security Policy</a>. That said...<BR><BR>
+
+Adobe Flash files and PDF files can be built to integrate content from websites online. To prevent the unauthorized use of your site&#039;s content in such files, you place a file called a Cross Domain Policy file on your site at the root, like so:<BR><BR>
+
+http://www.example.com/crossdomain.xml<BR><BR>
+
+Flash and PDF files are always supposed to "ask permission" to include content from your site by reading the directives you place in that file.
+<BR><BR>
+It turns out that it&#039;s okay for different folders to have their own Cross Domain Policy files. Maybe subfolders on your site belong to users who might place a Cross Domain Policy file somewhere in another directory, and it&#039;s not a policy you approve of!
+<BR><BR>
+How do you stop that? By implementing the Cross Domain Meta Policy HTTP header. This header tells Flash and PDF files which Cross Domain Policy files found on your site can be obeyed; yes, it&#039;s a policy about other policies! But as the webmaster, you&#039;re the boss. Lock things down to meet your site&#039;s business goals with Cross Domain Meta Policy.<BR><BR>
+Note that if you already have a crossdomain.xml file in place you are probably pretty safe, but adding this HTTP header is good defense in depth and is considered good security hygiene.<BR><BR>
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html" target="_blank">Adobe&#039;s documenation on Cross Domain Meta Policy usage</a></li>
+<li><a href="http://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf" target="_blank">Adobe Cross Domain Policy File Specification (PDF)</a></li>
+
+</ul>
+</section><section><hr><h4>We have seen this done well 70 times. Here are a few...</h4>
+<li>
+<a href="https://securityheaders.com/2013/10/12/battlegalaxycom.php">battlegalaxy.com</a>, examined Oct, 12, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/11/28/datacloudto.php">datacloud.to</a>, examined Nov, 28, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/12/28/wealthyrushcom.php">wealthyrush.com</a>, examined Dec, 28, 2013
+</li></section>

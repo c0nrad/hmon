@@ -1,0 +1,26 @@
+<section>
+<span class="byline">Show you care... use HTTPS everywhere!</span>
+
+
+Example: <pre>Strict-Transport-Security: max-age=31536000; includeSubDomains</pre>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+The HTTP Strict Transport Security (HSTS) Header is low hanging fruit when it comes to improving the security of your website. Everyone knows that SSL / TLS encrypts the communication between the browser and the webserver, provides assurance that the data hasn&#039;t been tampered with by a third party, and authenticates your organization to users. Why not increase the likelihood that those benefits are extended across your site?<br><BR>
+
+Using the HSTS header tells browsers that they should first make requests to your site over HTTPS <i>by default</i>! Sure, you could use server-side rewrites to redirect requests to HTTPS versions of content, but why spend those computational cycles? As Ilya Grigorik points out in his book <a href="http://www.amazon.com/High-Performance-Browser-Networking-performance/dp/1449344763" target="_blank">High Performance Browser Networking</a>, if you use HSTS <i>the browser</i> will automatically request HTTPS content first so in addition to increasing security you can consider it a performance tweak for your site.<br><BR>
+
+Moreover, you can use the max-age parameter to indicate that the browser should continue to do so for a length of time you wish!<br><BR>
+
+HSTS is a no-brainer if your site already offers HTTPS encryption.<br><BR>
+
+
+<h3>Further reading</h3>
+<ul>
+<li><a href="http://caniuse.com/stricttransportsecurity" target="_blank">Browser adoption of Strict Transport Security</a></li>
+<li><a href="http://dev.chromium.org/sts" target="_blank">Chromium HTTP Strict Transport Security documentation</a></li>
+<li><a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security" target="_blank">OWASP&#039;s HSTS page</a></li>
+<li><a href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02" target="_blank">IETF documentation on HTTP Strict Transport Security</a></li>
+</ul>
+
+</section>

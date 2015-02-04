@@ -1,0 +1,38 @@
+<section>
+<span class="byline">Who has a need to know what type of server you&#039;re running?</span>
+
+
+What It Looks Like: <code>Server: Apache-Coyote/1.1</code>
+<BR><BR>
+<h3>Tell Me More</h3>
+
+A lot of what is said on our <a href="https://securityheaders.com/x-powered-by.php">X-Powered-By</a> page applies here, which boils down to not telling anyone about how your site works unless they really need to know how your site works. The more people know about how your site works, the more information they have about what vulnerabilities might exist on your site.<BR><BR>
+In the example header shown above, the it&#039;s revealed that Apache-Coyote is running. Here are some other examples that are sometimes disclosed:<BR><BR>
+<ul><li>server: IBM_HTTP_Server</li>
+<li>Server: Apache/2.2.17 (Fedora)</li>
+<li>Server: nginx/1.2.1</li>
+<li>Server: Apache/2.2.23 (Unix) mod_ssl/2.2.23 OpenSSL/0.9.8e-fips-rhel5 mod_auth_passthrough/2.1 mod_bwlimited/1.4 FrontPage/5.0.2.2635</li>
+</ul>
+In my humble opinion, there&#039;s really no need to include any of that stuff in one&#039;s headers. Let me know if you feel otherwise. So the recommendation is to remove Server: from your headers.<BR><BR>
+<h3>Apache Makes It Hard</h3>
+Apache <a href="http://superuser.com/a/286811" target="_blank">doesn&#039;t make it easy</a> to remove the entire reference to the Apache server in one&#039;s headers. That is, you can remove the Apache version number but it still works hard to keep Server: Apache in there.<BR><BR>
+<h3>Does This Really Help?</h3>
+Some might say that removing the reference to the server and possibly its version number in one&#039;s HTTP headers is not all that useful because there are other ways to "fingerprint" a server. By poking, prodding, and pinging servers in certain ways and watching the responses you can deduce what server type and maybe even version is running. But making an attacker work harder is always preferable, so it&#039;s still recommended to attempt to remove refererences to the server type and version from one&#039;s headers.
+
+<BR><BR>
+<!--<h3>Further reading</h3>
+<ul>
+<li><a href="https://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity" target="_blank">Cross Origin Resource Sharing Security</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing" target="_blank">Cross Origin Resource Sharing on Wikipedia</a></li>
+<li><a href="http://www.andlabs.org/html5.html" target="_blank">Andlabs CORS Recommendations</a></li>
+</ul>-->
+</section><section><hr><h4>We have seen this done well 4808 times. Here are a few...</h4>
+<li>
+<a href="https://securityheaders.com/2013/05/11/freshdirectcom.php">freshdirect.com</a>, examined May, 11, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/06/27/perspolis-clubcom.php">perspolis-club.com</a>, examined Jun, 27, 2013
+</li>
+<li>
+<a href="https://securityheaders.com/2013/07/26/6arabcom.php">6arab.com</a>, examined Jul, 26, 2013
+</li></section>

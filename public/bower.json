@@ -1,0 +1,19 @@
+{
+  "name": "hmon",
+  "version": "0.0.0",
+  "authors": [
+    "c0nrad <c0nrad@c0nrad.io>"
+  ],
+  "description": "Header monitor",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "github.com/c0nrad/hmon",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

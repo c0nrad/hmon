@@ -1,0 +1,26 @@
+<h2>{{domain | capitalize}}</h2>
+
+<p> Last Seen Headers </p>
+
+<div ng-repeat="header in recentScan.Headers">
+  <strong> {{header}} </strong> : {{recentScan.Values[$index].join(' ')}}
+</div>
+
+<h3> Security Headers </h3>
+<div ng-repeat="header in headers">
+  <span class="text-success" ng-if="recentScan.Headers.indexOf(header) >= 0"> {{header}}  </span>
+  <span class="text-danger" ng-if="recentScan.Headers.indexOf(header) < 0"> {{header}}  </span>
+</div>
+
+<hr>
+
+{{headers}}
+
+<div ng-repeat="header in headers">
+  <h3> {{header}} </h3>
+    <p> {{headerDescriptions[header]}} </p>
+
+    <div ng-repeat="scan in headerScanGroups[header]">
+      {{ scan.ts }} {{scan.value}}
+    </div>
+</div>
