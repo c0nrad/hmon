@@ -1,5 +1,5 @@
 {
-	"ImportPath": "git.corp.yahoo.com/stuartlarsen/hmon",
+	"ImportPath": "github.com/c0nrad/hmon",
 	"GoVersion": "go1.4",
 	"Deps": [
 		{
