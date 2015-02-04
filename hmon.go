@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/url"
 	"os"
 	"time"
 
@@ -10,26 +11,42 @@ import (
 )
 
 const (
-	DefaultMongoURI = "localhost:27017"
-	Database        = "hmon"
-	Collection      = "scans"
+	Collection = "scans"
 )
 
 var Session *mgo.Session
-var Port = ":8080"
+var Port = GetPort()
+var Database = GetDBName()
+var MongoURI = GetMongoURI()
 
-func main() {
-	mongoURI := os.Getenv("MONGOLAB_URI")
-	if mongoURI == "" {
-		mongoURI = DefaultMongoURI
-	}
-
+func GetPort() string {
 	port := os.Getenv("PORT")
 	if port != "" {
-		Port = ":" + port
+		return ":" + port
+	}
+	return ":8080"
+}
+
+func GetDBName() string {
+	mongoLabURI := os.Getenv("MONGOLAB_URI")
+	if mongoLabURI == "" {
+		return "hmon"
 	}
 
-	session, err := mgo.Dial(mongoURI)
+	parsedUrl, _ := url.Parse(mongoLabURI)
+	return parsedUrl.Path[1:]
+}
+
+func GetMongoURI() string {
+	mongoLabURI := os.Getenv("MONGOLAB_URI")
+	if mongoLabURI == "" {
+		return "localhost:27017"
+	}
+	return mongoLabURI
+}
+
+func main() {
+	session, err := mgo.Dial(MongoURI)
 
 	if err != nil {
 		panic(err)
